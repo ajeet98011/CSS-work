@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width,initial-scale= 1.0">
+    <title>Password Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1>Password Generator</h1>
+
+      <div class="result">
+        <h3 id="passwordDissplay">Passwords</h3>
+      </div>
+      <form class="form"id="form">
+
+        <div class="form-container">
+          <label for="">Number of characters</label>
+          <div class="character_container">
+            <input type="range" min="1" max="50"id="characterRange" value="16">
+            <input type="number" min="1" max="50"id="characterRangeNumber" value="16">
+          </div>
+
+          <label for="">Include Uppercase</label>
+          <div class="switch">
+            <input type="checkbox"id="includeUppercase"class="input">
+            <div class="circle"></div>
+          </div>
+
+          <label for="">Include Number</label>
+          <div class="switch">
+            <input type="checkbox"id="includeNumber"class="input">
+            <div class="circle"></div>
+          </div>
+
+          <label for="">Include Special Symbol</label>
+          <div class="switch">
+            <input type="checkbox"id="includeSymbol"class="input">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="btn-conatiner">
+          <button type="submit" name="button" id="submitBtn"class="submit-btn">Generate Password</button>
+        </div>
+      </form>
+
+    </div>
+
+    <script src="javascript/script.js" charset="utf-8"></script>
+  </body>
+</html>
