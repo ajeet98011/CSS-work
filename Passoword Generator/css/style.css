@@ -11,14 +11,15 @@ body{
   display: grid;
   color: #e2e2e2;
   place-items:center;
+  padding: 30px;
 }
 
 .container{
   background: #121212;
-  width: 450px;
-  height: 450px;
+  max-width: 450px;
+  min-height: 450px;
   padding: 30px 20px;
-  border-radius: 10%;
+  border-radius: 50px;
   box-shadow: 8px 9px 15px rgba(0, 0, 0, 1),
               -3px -1px 10px rgba(255, 255, 255, 0.1);
   display: grid;
@@ -28,14 +29,16 @@ body{
 h1{
   font-size: 32px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .result{
   box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.1),
               inset 9px 6px 15px rgba(0, 0, 0, 1);
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   padding: 1rem;
-
+  margin-bottom: 20px;
   border-radius: 20px;
 }
 
@@ -49,13 +52,26 @@ h3{
   word-break: break-all;
 }
 
-.form-container{
+form {
+  padding: 20px 0;
+}
+
+.form-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr;
   row-gap: 1rem;
   column-gap: 1.5rem;
   align-items: center;
   justify-content: center;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 485px) {
+  .form-container {
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+  }
 }
 
 .character_container{
